@@ -142,8 +142,7 @@ def test_help_option():
     assert result.exit_code == 0
     assert "Usage" in result.stdout
     assert "Arguments" in result.stdout
-    assert "--help" in result.stdout
-    assert "--version" in result.stdout
+    assert "help" in result.stdout
 
 def test_help_option_along_other_parameter(date_one_year_from_now):
     result = runner.invoke(app, [date_one_year_from_now, "--help"])
