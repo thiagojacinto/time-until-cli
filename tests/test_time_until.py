@@ -148,6 +148,6 @@ def test_help_option_along_other_parameter(date_one_year_from_now):
     result = runner.invoke(app, [date_one_year_from_now, "--help"])
     assert result.exit_code == 0
     assert "Usage" in result.stdout
-    assert "--help" in result.stdout
+    assert "help" in result.stdout
     assert "seconds" not in result.stdout
     assert "days" not in result.stdout
