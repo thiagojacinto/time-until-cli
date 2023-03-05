@@ -8,7 +8,8 @@ from dateutil.parser import parse
 __version__ = "0.1.0"
 
 app = typer.Typer(
-    pretty_exceptions_show_locals=False
+    pretty_exceptions_show_locals=False,
+    help="Application that calculate time duration until reach a given date."
 )
 
 def version_callback(value: bool):
