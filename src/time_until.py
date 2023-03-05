@@ -40,6 +40,8 @@ def print_output(delta: relativedelta):
         result.append("{} minute(s) ".format(delta.minutes))
     if delta.seconds > 0:
         result.append("{} second(s) ".format(delta.seconds))
+
+    result.insert(0, 'Time remaining: ')
     print(''.join(result))
 
 @app.command()

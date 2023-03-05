@@ -37,6 +37,11 @@ class DateBuilder:
         """Set the the number of seconds from now"""
         self._date += relativedelta(seconds=seconds_from_now)
         return self
+    
+    def with_seconds_ago(self, seconds_ago : int):
+        """Set the the number of seconds ago from the current time"""
+        self._date -= relativedelta(seconds=seconds_ago)
+        return self
 
     def build(self):
         """Return the curret datetime entity"""
