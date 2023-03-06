@@ -5,7 +5,7 @@ import typer
 from dateutil.relativedelta import relativedelta
 from dateutil.parser import parse
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 app = typer.Typer(
     pretty_exceptions_show_locals=False,
