@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "time_until"
+authors = [
+  { name="Thiago Jacinto", email="46906069+thiagojacinto@users.noreply.github.com" },
+]
+description = "Application that calculate time duration until reach a given date"
+readme = "README.md"
+requires-python = ">=3.10.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+    "Development Status :: 4 - Beta"
+]
+dynamic = [
+    "version",
+    "dependencies"
+]
+
+[project.scripts]
+time_until = "time_until:app"
+
+[project.urls]
+"Homepage" = "https://github.com/thiagojacinto/time-until-cli"
+"Bug Tracker" = "https://github.com/thiagojacinto/time-until-cli/issues"
+"General Discussions" = "https://github.com/thiagojacinto/time-until-cli/discussions"
+
+[tool.setuptools.dynamic]
+version = {attr = "time_until.__version__"}
+dependencies = {file = ["requirements.txt"]}
