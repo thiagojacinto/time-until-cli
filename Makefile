@@ -1,5 +1,5 @@
 clean:
-	rm -rf src/__pycache__ tests/__pycache__ dist
+	rm -rf src/__pycache__ src/*.egg-info tests/__pycache__ dist
 
 setup: requirements-development.txt
 	pip install -r requirements-development.txt
