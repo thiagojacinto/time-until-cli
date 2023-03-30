@@ -27,3 +27,20 @@ Build a Python app that works as a CLI (Command-line Interface) that receives a 
 Once working, this project must be configured and submitted as Python package thru PyPI Modules. The process of development, build, release and publishing is the core of the project, to understand it and provice ideas and thoghts of process automation.
 
 Feel free to initiate a discusison, open a issue or a pull request to this project. All kinds of contributions and ideas are welcome. **_Let's code!_**
+
+## Developing
+
+Please read and make use of the [Makefile](Makefile) to help you with the common development processes like installing dependencies, test and build the Python package. 
+
+```bash
+# to install dependencies
+make setup
+
+# to execute the tests
+make test
+
+# to generate a local build of the CLI time-until
+make build
+```
+
+This project is currently using [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) methodology to maintain the readability of the code versioning.
