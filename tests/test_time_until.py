@@ -64,8 +64,8 @@ def test_successful_future_date_happy_path(date_one_year_from_now):
 
 @pytest.mark.parametrize("accepted_format", accepted_date_formats_list())
 def test_successful_future_date_with_different_date_formats(accepted_format):
-    future = DateBuilder().with_years_ahead(2).with_months_ahead(1).with_days_ahead(2).with_hours_ahead(1).with_minutes_ahead(12).with_seconds_ahead(15).build().strftime(accepted_format)
-
+    future = DateBuilder().with_years_ahead(2).with_months_ahead(1).with_days_ahead(4).with_hours_ahead(1).with_minutes_ahead(12).with_seconds_ahead(15).build().strftime(accepted_format)
+    
     result = runner.invoke(app, [future])
     assert result.exit_code == 0
     assert "(s)" in result.output
