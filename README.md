@@ -2,6 +2,13 @@
 > Application that calculate time duration until reach a given date.
 
 **Main objective**: Understanding the logic of _Python_ app publishing and documenting it on a simple project.
+## Installation
+
+You may install application package on PyPI:
+
+```bash
+pip install time-until
+```
 
 ## Usage
 
@@ -38,6 +45,9 @@ make setup
 
 # to execute the tests
 make test
+
+# to generate test coverage reports - stdout & HTML file
+make coverage
 
 # to generate a local build of the CLI time-until
 make build
