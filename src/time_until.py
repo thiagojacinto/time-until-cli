@@ -5,7 +5,7 @@ import typer
 from dateutil.relativedelta import relativedelta
 from dateutil.parser import parse
 
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 
 app = typer.Typer(
     pretty_exceptions_show_locals=False,
@@ -59,8 +59,8 @@ def time_until(
 
     if parsed_target < datetime.now():
         raise ValueError("Not possible to calculate duration to a past date or time. Try again with future date OR time.")
-    
-    if is_valid:   
+
+    if is_valid:
         result = calculate_delta(parsed_target, rightnow)
         print_output(result)
 
