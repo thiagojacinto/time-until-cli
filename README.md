@@ -27,3 +27,40 @@ Build a Python app that works as a CLI (Command-line Interface) that receives a 
 Once working, this project must be configured and submitted as Python package thru PyPI Modules. The process of development, build, release and publishing is the core of the project, to understand it and provice ideas and thoghts of process automation.
 
 Feel free to initiate a discusison, open a issue or a pull request to this project. All kinds of contributions and ideas are welcome. **_Let's code!_**
+
+## Development
+
+A quick guide to contribute (or develop) on this project.
+
+We recommend to [use an isolated environment](https://packaging.python.org/pt-br/latest/guides/installing-using-pip-and-virtual-environments/), then install the devolpment dependencies:
+
+```bash
+# For Unix / macOS systems
+
+cd path/to/time-until # substitute with the real path to this project directory
+
+# Activate Python enviroment
+python3 -m venv .venv
+source .venv/bin/activate
+
+# Install development dependencies
+pip install -r requirements-development.txt 
+```
+
+### Testing
+
+With development dependencies installed, you can execute tests with *pytest*:
+
+```bash
+# Run tests
+pytest
+```
+
+### Packaging
+
+Create a package of this project with `wheel`:
+
+```bash
+# Build
+python3 -m build --wheel
+```
