@@ -30,13 +30,15 @@ def accepted_date_formats_list():
     accepted_formats_list.append("%Y-%m-%d %Hh%Ss")
     accepted_formats_list.append("%Y-%m-%d %Hh%Mm")
     accepted_formats_list.append("%Y-%m-%d %Hh%Mm%Ss")
+    accepted_formats_list.append("%Y%m%d %Hh%Mm%Ss")
+    accepted_formats_list.append("%Y%m%d")
     
     return accepted_formats_list
 
 def invalid_date_formats_list():
     """Return a list of invalid date formats"""
     invalid_formats_list = []
-    invalid_formats_list.append("%j")
+    invalid_formats_list.append("%J")
     invalid_formats_list.append("%Y-%D")
     invalid_formats_list.append("%Y-%m-%d %Hh%Mmin")
     invalid_formats_list.append("%Y-%m-%d %Hh%Mmin%Ss")
